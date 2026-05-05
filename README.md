@@ -8,8 +8,8 @@
   <h3>Creative Engineer | AI Architect | 3D Designer</h3>
   
   <p align="center">
-    <a href="https://arcynith.cloud">Portfolio</a> •
-    <a href="mailto:[EMAIL_ADDRESS]">Email</a> •
+    <a href="https://arcynith.cloud">Portfolio</a>
+    <a href="mailto:[EMAIL_ADDRESS]">Email</a>
   </p>
 
   <p><i>"Bridging the gap between code and art. I build digital experiences that live at the intersection of high-end design and robust engineering."</i></p>
