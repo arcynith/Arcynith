@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="https://raw.githubusercontent.com/fectn/Arcynith/main/public/readme-banner.png" width="100%" alt="Arcynith Banner" />
+  
+  <br />
+  
+  <h1>Hi there, I'm Arcynith <img src="https://media.giphy.com/media/hvRJCLzdwOFfW/giphy.gif" width="30px"></h1>
+  
+  <h3>Creative Engineer | AI Architect | 3D Designer</h3>
+  
+  <p align="center">
+    <a href="https://arcynith.cloud">Portfolio</a> •
+    <a href="mailto:[EMAIL_ADDRESS]">Email</a> •
+  </p>
 
-## Getting Started
+  <p><i>"Bridging the gap between code and art. I build digital experiences that live at the intersection of high-end design and robust engineering."</i></p>
+</div>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### ⚡ About Me
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🚀 **Currently building**: Immersive 3D environments and local-first AI solutions.
+- 🎨 **Philosophy**: Every line of code should contribute to a seamless, premium user experience.
+- 🛠️ **Expertise**: Full Stack Web, Mobile (Flutter), AI Engineering, and 3D Art.
+- ☁️ **Mission**: Crafting the future of the web, one pixel at a time.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🛠️ The Stack
 
-## Learn More
+<div align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=threedotjs&logoColor=white" />
+  <br />
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" />
+  <img src="https://img.shields.io/badge/Unity-101010?style=for-the-badge&logo=unity&logoColor=white" />
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🌟 Featured Work
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Project | Tech Stack | Description |
+| :--- | :--- | :--- |
+| **[Altair](https://github.com/arcynith/Altair)** | Flutter, AI | Offline-first local AI assistant running directly on device. |
+| **[Adola](https://github.com/arcynith/Adola)** | Flutter, Music | Premium music management and playback experience. |
+| **[OrdoKu](https://github.com/arcynith/OrdoKu)** | Flutter, Desktop | A modern, dark-luxury productivity and office suite. |
+| **[Vendku](https://github.com/arcynith/Vendku)** | Flutter, POS | Empowering UMKM with smart inventory and sales tracking. |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📊 GitHub Pulse
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=fectn&show_icons=true&theme=tokyonight&bg_color=050505&title_color=10b981&icon_color=10b981&text_color=a3a3a3&border_color=1f2937" alt="Arcynith's GitHub Stats" />
+  <br />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fectn&layout=compact&theme=tokyonight&bg_color=050505&title_color=10b981&icon_color=10b981&text_color=a3a3a3&border_color=1f2937" alt="Top Langs" />
+</div>
+
+---
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=fectn&theme=tokyonight&background=050505&ring=10b981&fire=10b981&currStreakLabel=10b981" alt="GitHub Streak" />
+</div>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=fectn&label=Profile%20Views&color=10b981&style=flat-square" alt="Views" />
+</p>
