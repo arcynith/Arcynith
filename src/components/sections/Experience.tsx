@@ -1,1 +1,94 @@
-"use client";import{motion}from"framer-motion";const E=[{R:"Lead Creative Engineer",C:"Studio Arcynith",Y:"2023 - Present",D:"Bridging technical architecture with high-end digital design."},{R:"AI & Full Stack Developer",C:"Tech Nexus",Y:"2021 - 2023",D:"Developed generative AI tools and robust web platforms."},{R:"3D Artist & Game Dev",C:"Indie Collective",Y:"2019 - 2021",D:"Created assets, environments, and core loops for Unity titles."}];export default function Experience(){return(<section id="experience" className="py-32 px-6 bg-[#050505]"><div className="max-w-4xl mx-auto"><motion.h2 className="text-sm font-medium tracking-widest text-emerald-500 uppercase mb-16" initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:!0,margin:"-100px"}}>Experience</motion.h2><div className="space-y-12">{E.map((X,I)=>(<motion.div key={I} className="group flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 border-b border-neutral-800/50 pb-12 last:border-0 md:hover:border-emerald-500/30 transition-colors duration-500 cursor-default" initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:!0,margin:"-100px"}} transition={{delay:I*.1,duration:.8}}><div className="md:w-1/4 text-neutral-500 font-mono text-sm md:group-hover:text-emerald-500 transition-colors duration-500 overflow-hidden"><motion.div initial={{y:"100%"}} whileInView={{y:0}} viewport={{once:!0}} transition={{delay:I*.1+.2,duration:.6,ease:[.16,1,.3,1]}}>{X.Y}</motion.div></div><div className="md:w-3/4 transform md:group-hover:translate-x-2 transition-transform duration-500"><div className="overflow-hidden mb-1"><motion.h3 className="text-xl font-bold text-emerald-500 md:group-hover:text-emerald-400 transition-colors duration-500" initial={{y:"100%"}} whileInView={{y:0}} viewport={{once:!0}} transition={{delay:I*.1+.3,duration:.6,ease:[.16,1,.3,1]}}>{X.R}</motion.h3></div><div className="overflow-hidden mb-4"><motion.h4 className="text-neutral-400 font-bold md:group-hover:text-emerald-200 transition-colors duration-500" initial={{y:"100%"}} whileInView={{y:0}} viewport={{once:!0}} transition={{delay:I*.1+.4,duration:.6,ease:[.16,1,.3,1]}}>{X.C}</motion.h4></div><motion.p className="text-neutral-500 font-light leading-relaxed md:group-hover:text-neutral-400 transition-colors duration-500" initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:!0}} transition={{delay:I*.1+.5,duration:.8}}>{X.D}</motion.p></div></motion.div>))}</div></div></section>);}
+"use client";
+
+import { motion } from "framer-motion";
+
+const E = [
+  { R: "Lead Creative Engineer", C: "Studio Arcynith", Y: "2023 - Present", D: "Bridging technical architecture with high-end digital design." },
+  { R: "AI & Full Stack Developer", C: "Tech Nexus", Y: "2021 - 2023", D: "Developed generative AI tools and robust web platforms." },
+  { R: "3D Artist & Game Dev", C: "Indie Collective", Y: "2019 - 2021", D: "Created assets, environments, and core loops for Unity titles." }
+];
+
+export default function Experience() {
+  return (
+    <section id="experience" className="py-32 px-6 bg-[#050505]">
+      <div className="max-w-4xl mx-auto">
+        <motion.h2
+          className="text-sm font-medium tracking-widest text-emerald-500 uppercase mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          Experience
+        </motion.h2>
+        <div className="space-y-12">
+          {E.map((X, I) => (
+            <motion.div
+              key={I}
+              className="group flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 border-b border-neutral-800/50 pb-12 last:border-0 md:hover:border-emerald-500/30 transition-colors duration-500 cursor-default"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: I * 0.1, duration: 0.8 }}
+            >
+              <div className="md:w-1/4 text-neutral-500 font-mono text-sm md:group-hover:text-emerald-500 transition-colors duration-500 overflow-hidden">
+                <motion.div
+                  initial={{ y: "100%" }}
+                  whileInView={{ y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: I * 0.1 + 0.2,
+                    duration: 0.6,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                >
+                  {X.Y}
+                </motion.div>
+              </div>
+              <div className="md:w-3/4 transform md:group-hover:translate-x-2 transition-transform duration-500">
+                <div className="overflow-hidden mb-1">
+                  <motion.h3
+                    className="text-xl font-bold text-emerald-500 md:group-hover:text-emerald-400 transition-colors duration-500"
+                    initial={{ y: "100%" }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      delay: I * 0.1 + 0.3,
+                      duration: 0.6,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
+                  >
+                    {X.R}
+                  </motion.h3>
+                </div>
+                <div className="overflow-hidden mb-4">
+                  <motion.h4
+                    className="text-neutral-400 font-bold md:group-hover:text-emerald-200 transition-colors duration-500"
+                    initial={{ y: "100%" }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      delay: I * 0.1 + 0.4,
+                      duration: 0.6,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
+                  >
+                    {X.C}
+                  </motion.h4>
+                </div>
+                <motion.p
+                  className="text-neutral-500 font-light leading-relaxed md:group-hover:text-neutral-400 transition-colors duration-500"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: I * 0.1 + 0.5, duration: 0.8 }}
+                >
+                  {X.D}
+                </motion.p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

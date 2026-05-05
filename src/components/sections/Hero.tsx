@@ -1,1 +1,70 @@
-"use client";import{motion,useScroll,useTransform,useMotionValue,useSpring}from"framer-motion";import{useRef,useState,useEffect}from"react";import HeroSculpture from"../canvas/HeroSculpture";import MagneticElement from"../ui/MagneticElement";export default function Hero(){const C=useRef<HTMLDivElement>(null);const{scrollY:S}=useScroll();const Y=useTransform(S,[0,1000],[0,300]);const M_X=useMotionValue(0);const M_Y=useMotionValue(0);const S_X=useSpring(M_X,{stiffness:50,damping:20});const S_Y=useSpring(M_Y,{stiffness:50,damping:20});const[L,I]=useState(!false);useEffect(()=>{const H=()=>I(!0);window.addEventListener("preloaderComplete",H);const T=setTimeout(()=>I(!0),3e3);const MM=(e:MouseEvent)=>{if(C.current){const{clientX:cx,clientY:cy}=e;const{innerWidth:iw,innerHeight:ih}=window;M_X.set((cx/iw-.5)*40);M_Y.set((cy/ih-.5)*40)}};window.addEventListener("mousemove",MM);return()=>{window.removeEventListener("preloaderComplete",H);window.removeEventListener("mousemove",MM);clearTimeout(T)}},[M_X,M_Y]);return(<section ref={C} className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-4 sm:px-6"><HeroSculpture/><motion.div style={{y:Y,x:S_X,rotateX:S_Y,rotateY:S_X}} className="z-10 flex flex-col items-center text-center mt-8 sm:mt-12 perspective-[1000px]"><motion.div initial={{opacity:0,scale:.95}} animate={L?{opacity:1,scale:1}:{opacity:0,scale:.95}} transition={{duration:1.2,ease:[.16,1,.3,1]}} className="mb-4 sm:mb-6 flex flex-col items-center"><div className="inline-block px-3 py-1 mb-6 sm:mb-8 border border-emerald-500/30 rounded-full bg-neutral-950/50 backdrop-blur-md"><span className="text-[10px] sm:text-xs font-bold tracking-widest text-emerald-500 uppercase">Creative Engineer</span></div><h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-neutral-50 mb-4 sm:mb-6 flex overflow-hidden py-2 cursor-default">{"arcynith.cloud".split("").map((C,N)=>(<motion.span key={N} initial={{y:"100%"}} animate={L?{y:0}:{y:"100%"}} transition={{duration:.8,delay:N*.04+.2,ease:[.16,1,.3,1]}} className="inline-block md:hover:text-emerald-500 transition-colors duration-200">{C==="."?<span className="text-emerald-500">.</span>:C}</motion.span>))}</h1></motion.div><motion.p className="text-sm sm:text-base md:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto font-light tracking-wide mb-8 sm:mb-10 leading-relaxed px-2" initial={{opacity:0,y:20}} animate={L?{opacity:1,y:0}:{opacity:0,y:20}} transition={{duration:1,delay:.2,ease:[.16,1,.3,1]}}>Bridging the gap between code and art. Specializing in <span className="text-emerald-500 font-bold">3D</span>, <span className="text-emerald-500 font-bold">2D Design</span>, <span className="text-emerald-500 font-bold">Game Dev</span>, <span className="text-emerald-500 font-bold">AI Engineering</span> & <span className="text-emerald-500 font-bold">Full Stack</span>.</motion.p><motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0" initial={{opacity:0,y:20}} animate={L?{opacity:1,y:0}:{opacity:0,y:20}} transition={{duration:1,delay:.4,ease:[.16,1,.3,1]}}><MagneticElement><a href="#work" className="inline-block w-full sm:w-auto text-center px-8 py-3.5 bg-emerald-500 text-black rounded-full font-bold text-sm transition-all md:hover:bg-emerald-400 md:hover:scale-105">Explore Work</a></MagneticElement><MagneticElement><a href="#contact" className="inline-block w-full sm:w-auto text-center px-8 py-3.5 border border-emerald-500/30 text-emerald-500 rounded-full font-bold text-sm transition-all md:hover:bg-emerald-500/10 md:hover:text-emerald-400 md:hover:scale-105 md:hover:border-emerald-500/80">Get in touch</a></MagneticElement></motion.div></motion.div></section>);}
+"use client";
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import HeroSculpture from "../canvas/HeroSculpture";
+import MagneticElement from "../ui/MagneticElement";
+
+export default function Hero() {
+  const C = useRef<HTMLDivElement>(null);
+  const { scrollY: S } = useScroll();
+  const Y = useTransform(S, [0, 1000], [0, 300]);
+  const M_X = useMotionValue(0);
+  const M_Y = useMotionValue(0);
+  const S_X = useSpring(M_X, { stiffness: 50, damping: 20 });
+  const S_Y = useSpring(M_Y, { stiffness: 50, damping: 20 });
+  const [L, I] = useState(!false);
+
+  useEffect(() => {
+    const H = () => I(!0);
+    window.addEventListener("preloaderComplete", H);
+    const T = setTimeout(() => I(!0), 3e3);
+
+    const MM = (e: MouseEvent) => {
+      if (C.current) {
+        const { clientX: cx, clientY: cy } = e;
+        const { innerWidth: iw, innerHeight: ih } = window;
+        M_X.set((cx / iw - .5) * 40);
+        M_Y.set((cy / ih - .5) * 40);
+      }
+    };
+    window.addEventListener("mousemove", MM);
+
+    return () => {
+      window.removeEventListener("preloaderComplete", H);
+      window.removeEventListener("mousemove", MM);
+      clearTimeout(T);
+    };
+  }, [M_X, M_Y]);
+
+  return (
+    <section ref={C} className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-4 sm:px-6">
+      <HeroSculpture />
+      <motion.div style={{ y: Y, x: S_X, rotateX: S_Y, rotateY: S_X }} className="z-10 flex flex-col items-center text-center mt-8 sm:mt-12 perspective-[1000px]">
+        <motion.div initial={{ opacity: 0, scale: .95 }} animate={L ? { opacity: 1, scale: 1 } : { opacity: 0, scale: .95 }} transition={{ duration: 1.2, ease: [.16, 1, .3, 1] }} className="mb-4 sm:mb-6 flex flex-col items-center">
+          <div className="inline-block px-3 py-1 mb-6 sm:mb-8 border border-emerald-500/30 rounded-full bg-neutral-950/50 backdrop-blur-md">
+            <span className="text-[10px] sm:text-xs font-bold tracking-widest text-emerald-500 uppercase">Creative Engineer</span>
+          </div>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-neutral-50 mb-4 sm:mb-6 flex overflow-hidden py-2 cursor-default">
+            {"arcynith.cloud".split("").map((C, N) => (
+              <motion.span
+                key={N}
+                initial={{ y: "100%" }}
+                animate={L ? { y: 0 } : { y: "100%" }}
+                transition={{ duration: .8, delay: N * .04 + .2, ease: [.16, 1, .3, 1] }}
+                className="inline-block md:hover:text-emerald-500 transition-colors duration-200">
+                {C === "." ? <span className="text-emerald-500">.</span> : C}
+              </motion.span>
+            ))}
+          </h1>
+        </motion.div>
+        <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto font-light tracking-wide mb-8 sm:mb-10 leading-relaxed px-2" initial={{ opacity: 0, y: 20 }} animate={L ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 1, delay: .2, ease: [.16, 1, .3, 1] }}>
+          Bridging the gap between code and art. Specializing in <span className="text-emerald-500 font-bold">3D</span>, <span className="text-emerald-500 font-bold">2D Design</span>, <span className="text-emerald-500 font-bold">Game Dev</span>, <span className="text-emerald-500 font-bold">AI Engineering</span> & <span className="text-emerald-500 font-bold">Full Stack</span>.
+        </motion.p>
+        <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0" initial={{ opacity: 0, y: 20 }} animate={L ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 1, delay: .4, ease: [.16, 1, .3, 1] }}>
+          <MagneticElement><a href="#work" className="inline-block w-full sm:w-auto text-center px-8 py-3.5 bg-emerald-500 text-black rounded-full font-bold text-sm transition-all md:hover:bg-emerald-400 md:hover:scale-105">Explore Work</a></MagneticElement>
+          <MagneticElement><a href="#contact" className="inline-block w-full sm:w-auto text-center px-8 py-3.5 border border-emerald-500/30 text-emerald-500 rounded-full font-bold text-sm transition-all md:hover:bg-emerald-500/10 md:hover:text-emerald-400 md:hover:scale-105 md:hover:border-emerald-500/80">Get in touch</a></MagneticElement>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}

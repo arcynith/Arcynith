@@ -1,1 +1,79 @@
-"use client";import{motion}from"framer-motion";import{ArrowUpRight}from"lucide-react";export default function Contact(){return(<section id="contact" className="py-32 px-6 bg-black relative overflow-hidden"><div className="max-w-4xl mx-auto relative z-10 text-center mb-16"><motion.h2 className="text-sm font-medium tracking-widest text-emerald-500 uppercase mb-8" initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:!0,margin:"-100px"}}>Let&apos;s Connect</motion.h2><motion.div initial={{opacity:0,scale:.9}} whileInView={{opacity:1,scale:1}} viewport={{once:!0,margin:"-100px"}} transition={{delay:.05,duration:.5}} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-800 bg-neutral-900/50 mb-10"><span className="relative flex h-2 w-2"><span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 animate-pulse"/></span><span className="text-xs font-mono text-neutral-300 uppercase tracking-wider">Open to New Projects</span></motion.div><motion.div className="text-5xl md:text-7xl font-bold tracking-tighter text-emerald-500 mb-12 flex justify-center flex-wrap overflow-hidden gap-x-3 md:gap-x-4" initial="hidden" whileInView="visible" viewport={{once:!0,margin:"-100px"}} variants={{visible:{transition:{staggerChildren:.1}},hidden:{}}}>{"Start a project?".split(" ").map((W,I)=>(<motion.span key={I} variants={{hidden:{y:"100%",rotate:10},visible:{y:"0%",rotate:0,transition:{duration:.8,ease:[.16,1,.3,1]}}}} className="inline-block">{W}</motion.span>))}</motion.div><motion.a href="mailto:hello@arcynith.cloud" className="inline-flex items-center gap-2 text-xl md:text-2xl font-bold text-neutral-400 md:hover:text-emerald-500 transition-colors border-b border-transparent md:hover:border-emerald-500 pb-1" initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:!0,margin:"-100px"}} transition={{delay:.2,duration:.8}}>hello@arcynith.cloud <ArrowUpRight size={24}/></motion.a></div><div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-600 font-medium tracking-wider uppercase gap-4"><p>© {new Date().getFullYear()} arcynith.cloud</p><p>Creative Engineer</p></div></section>);}
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+export default function Contact() {
+  return (
+    <section
+      id="contact"
+      className="py-32 px-6 bg-black relative overflow-hidden"
+    >
+      <div className="max-w-4xl mx-auto relative z-10 text-center mb-16">
+        <motion.h2
+          className="text-sm font-medium tracking-widest text-emerald-500 uppercase mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          Let&apos;s Connect
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.05, duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-800 bg-neutral-900/50 mb-10"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 animate-pulse" />
+          </span>
+          <span className="text-xs font-mono text-neutral-300 uppercase tracking-wider">
+            Open to New Projects
+          </span>
+        </motion.div>
+        <motion.div
+          className="text-5xl md:text-7xl font-bold tracking-tighter text-emerald-500 mb-12 flex justify-center flex-wrap overflow-hidden gap-x-3 md:gap-x-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } },
+            hidden: {},
+          }}
+        >
+          {"Start a project?".split(" ").map((W, I) => (
+            <motion.span
+              key={I}
+              variants={{
+                hidden: { y: "100%", rotate: 10 },
+                visible: {
+                  y: "0%",
+                  rotate: 0,
+                  transition: {
+                    duration: 0.8,
+                    ease: [0.16, 1, 0.3, 1],
+                  },
+                },
+              }}
+              className="inline-block"
+            >
+              {W}
+            </motion.span>
+          ))}
+        </motion.div>
+        <motion.a
+          href="mailto:hello@arcynith.cloud"
+          className="inline-flex items-center gap-2 text-xl md:text-2xl font-bold text-neutral-400 md:hover:text-emerald-500 transition-colors border-b border-transparent md:hover:border-emerald-500 pb-1"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          hello@arcynith.cloud <ArrowUpRight size={24} />
+        </motion.a>
+      </div>
+      <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-600 font-medium tracking-wider uppercase gap-4">
+        <p>© {new Date().getFullYear()} arcynith.cloud</p>
+        <p>Creative Engineer</p>
+      </div>
+    </section>
+  );
+}
